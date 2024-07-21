@@ -203,6 +203,7 @@ li {
     letter-spacing: -10px;
 }
 
+
 .video-container {
     height: 100vh;
     margin-top: 1.5vw;
@@ -223,7 +224,7 @@ li {
     opacity: 0;
     scale: 0;
     cursor: pointer;
-}
+} 
 
 /* Page 2 */
 
@@ -467,7 +468,7 @@ h2,
 /* Page 6 */
 
 #page6 {
-    margin: 15vh 0 40vh;
+    margin: 15vh 0 10vh;
 }
 
 #page6 .border-p {

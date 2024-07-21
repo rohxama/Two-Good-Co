@@ -61,38 +61,31 @@ logoAnimation();
 
 // Mouse Cursor on Video
 function videoPlayBtnAnimation() {
-    const videoContainer = document.querySelector(".video-container");
-    const playBtn = document.querySelector(".play-btn");
+    let videoContainer = document.querySelector(".video-container");
+    let playBtn = document.querySelector(".play-btn");
 
     videoContainer.addEventListener("mouseenter", function () {
         gsap.to(playBtn, {
             opacity: 1,
-            scale: 1,
-            duration: 0.3
+            scale: 1
         });
     });
-
     videoContainer.addEventListener("mouseleave", function () {
         gsap.to(playBtn, {
             opacity: 0,
-            scale: 0,
-            duration: 0.3
+            scale: 0
         });
     });
-
-    videoContainer.addEventListener("mousemove", function (event) {
-        const rect = videoContainer.getBoundingClientRect();
-        const x = event.clientX - rect.left;
-        const y = event.clientY - rect.top;
-
+    videoContainer.addEventListener("mousemove", function (move) {
         gsap.to(playBtn, {
-            left: x,
-            top: y,
+            left: move.x,
+            top: move.y,
             transform: 'translate(-50%, -50%)',
-            duration: 0.1
+            scale: 1
         });
     });
 }
+videoPlayBtnAnimation();
 
 videoPlayBtnAnimation();
 
